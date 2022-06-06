@@ -17,6 +17,6 @@ java -jar target/post-service-1.0-SNAPSHOT-jar-with-dependencies.jar <span style
 Example
 
 ```
-    mvnw clean install
+    .\mvnw clean install  
     java -jar target/post-service-1.0-SNAPSHOT-jar-with-dependencies.jar C:\Users\user-name\Desktop\output
 ```

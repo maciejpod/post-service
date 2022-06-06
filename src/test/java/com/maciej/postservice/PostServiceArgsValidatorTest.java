@@ -34,7 +34,7 @@ class PostServiceArgsValidatorTest {
         // when & then
         assertThatExceptionOfType(PostServiceArgsValidator.PostServiceArgsException.class)
                 .isThrownBy(validator::validate)
-                .withMessage("Posts output directory must be given!");
+                .withMessage("Existing posts output directory must be given!");
     }
 
     @Test
