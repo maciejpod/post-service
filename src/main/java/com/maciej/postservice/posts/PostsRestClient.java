@@ -40,16 +40,16 @@ class PostsRestClient implements PostsSupplier {
 
     @Override
     public Stream<Post> fetchPosts() {
-        log.info("Attempt to fetch com.maciej.postservice.posts from {}", allPostsUrl);
+        log.info("Attempt to fetch posts from {}", allPostsUrl);
 
         try {
             return getPosts();
         } catch (URISyntaxException | IOException exc) {
-            throw new PostSupplierException("Could not fetch com.maciej.postservice.posts!", exc);
+            throw new PostSupplierException("Could not fetch posts!", exc);
         } catch (InterruptedException exc) {
             Thread.currentThread().interrupt();
 
-            throw new PostSupplierException("Could not fetch com.maciej.postservice.posts!", exc);
+            throw new PostSupplierException("Could not fetch posts!", exc);
         }
     }
 
@@ -64,7 +64,7 @@ class PostsRestClient implements PostsSupplier {
         }
 
         throw new PostSupplierException(
-                format("Could not GET com.maciej.postservice.posts - status: '%s' body: '%s'", response.statusCode(), response.body())
+                format("Could not GET posts - status: '%s' body: '%s'", response.statusCode(), response.body())
         );
     }
 

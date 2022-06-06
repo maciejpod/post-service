@@ -75,7 +75,7 @@ class PostsRestClientTest {
         // when & then
         assertThatExceptionOfType(PostSupplierException.class)
                 .isThrownBy(client::fetchPosts)
-                .withMessageStartingWith("Could not GET com.maciej.postservice.posts - status: '500' body: ");
+                .withMessageStartingWith("Could not GET posts - status: '500' body: ");
     }
 
     @Test
@@ -86,7 +86,7 @@ class PostsRestClientTest {
         // when & then
         assertThatExceptionOfType(PostSupplierException.class)
                 .isThrownBy(client::fetchPosts)
-                .withMessage("Could not fetch com.maciej.postservice.posts!");
+                .withMessage("Could not fetch posts!");
     }
 
     @Test
@@ -98,7 +98,7 @@ class PostsRestClientTest {
         // when & then
         assertThatExceptionOfType(PostSupplierException.class)
                 .isThrownBy(client::fetchPosts)
-                .withMessage("Could not fetch com.maciej.postservice.posts!");
+                .withMessage("Could not fetch posts!");
     }
 
 }

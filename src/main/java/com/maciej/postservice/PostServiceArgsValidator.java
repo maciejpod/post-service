@@ -37,7 +37,7 @@ class PostServiceArgsValidator {
 
     private void validateArgumentsLength() {
         if (args.length < 1) {
-            throw new PostServiceArgsException("Expected argument with com.maciej.postservice.posts output directory must be given!");
+            throw new PostServiceArgsException("Posts output directory must be given!");
         }
     }
 
